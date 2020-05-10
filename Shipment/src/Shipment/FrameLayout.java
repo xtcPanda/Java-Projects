@@ -20,6 +20,7 @@ public class FrameLayout extends JFrame {
     //adding components
     private TextPanel textpanel;
     private JButton btn;
+    private Toolbar toolBar;
     
     //adding a constructor for the class
     public FrameLayout(){
@@ -29,6 +30,7 @@ public class FrameLayout extends JFrame {
         
         setLayout(new BorderLayout());
         
+        toolBar = new Toolbar();
         textpanel = new TextPanel();
         btn = new JButton("Click me!");
         
@@ -40,6 +42,7 @@ public class FrameLayout extends JFrame {
             }
         });
         
+        add(toolBar, BorderLayout.NORTH);
         add(textpanel, BorderLayout.CENTER);
         add(btn, BorderLayout.SOUTH);
         
