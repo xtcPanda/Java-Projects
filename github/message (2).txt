@@ -1,0 +1,1313 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication47;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
+
+/**
+ *
+ * @author zyada
+ */
+public class JavaApplication47 {
+    	private JFrame frame;
+	JPanel panel_3;
+	JPanel panel_2 ;
+	JLabel lblNewLabel_11;
+	JButton btnNewButton_10;
+	JFrame frame_1;
+	int counter=1; 
+	int counter_1=0;
+	int counter_2=0;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	JLabel lblNewLabel_15;
+	String text=" ";
+	String [] name=new String[11];
+	String [] location=new String[11];
+	String [] number=new String[11];
+	JLabel lblNewLabel_12;
+	JLabel lblNewLabel_16;
+	JLabel lblNewLabel_17;
+	JLabel lblNewLabel_18;
+	JLabel lblNewLabel_19;
+	JLabel lblNewLabel_20;
+	JLabel lblNewLabel_21;
+	JLabel lblNewLabel_22;
+	JLabel lblNewLabel_23;
+	JLabel lblNewLabel_24;
+	JCheckBox chckbxNewCheckBox ;
+	JCheckBox chckbxNewCheckBox_1 ;
+	JCheckBox chckbxNewCheckBox_2 ;
+	JCheckBox chckbxNewCheckBox_3 ;
+	JCheckBox chckbxNewCheckBox_4 ;
+	JCheckBox chckbxNewCheckBox_5 ;
+	JCheckBox chckbxNewCheckBox_6;
+	JCheckBox chckbxNewCheckBox_7;
+	JCheckBox chckbxNewCheckBox_8;
+	JCheckBox chckbxNewCheckBox_9;
+	private JFrame[] frame_2;
+	String[] text_1= {"West Virginia"," Washington"," Virginia","Vermont"," Utah","New Jersey","New Hampshire","Nevada","California","Florida"};
+
+
+
+    
+public JavaApplication47(){
+
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.DARK_GRAY);
+
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(new BorderLayout(0,10));
+		frame.setSize(800,600);
+	
+		//frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		frame.setVisible(false);
+		
+		frame_1= new JFrame();
+		frame_1.getContentPane().setBackground(Color.DARK_GRAY);
+		frame_1.setVisible(true);
+		frame_1.setSize(800,600);
+		frame_1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame_2=new JFrame[10];
+
+
+		
+		JPanel panel = new JPanel();
+		
+		panel.setBackground(Color.RED);
+		frame.getContentPane().add(panel);
+		frame.getContentPane().add(panel, BorderLayout.NORTH);
+
+		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		JLabel lblNewLabel = new JLabel("Shipping Company");
+		lblNewLabel.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+		lblNewLabel.setForeground(Color.WHITE);
+		panel.add(lblNewLabel);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.DARK_GRAY);
+		frame.getContentPane().add(panel_1);
+		panel_1.setLayout(new BorderLayout(100, 0));
+		
+		panel_2 = new JPanel();
+		panel_2.setBackground(Color.RED);
+		panel_1.add(panel_2, BorderLayout.WEST);
+		panel_2.setLayout(new GridLayout(10, 2,5,20));
+		panel_2.setBorder(new TitledBorder(new LineBorder(Color.black, 2), "shipments"));
+
+		JLabel lblNewLabel_1;
+		lblNewLabel_1 = new JLabel(" bag");
+		lblNewLabel_1.setForeground(Color.WHITE);
+		
+		
+		panel_2.add(lblNewLabel_1);
+		JButton btnNewButton;
+		 btnNewButton = new JButton("+");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				lblNewLabel_1.setVisible(false);
+				btnNewButton.setVisible(false);
+				lblNewLabel_12.setVisible(true);
+				chckbxNewCheckBox.setVisible(true);
+				frame.revalidate();
+		
+			}
+		});
+		btnNewButton.setBackground(Color.WHITE);
+		panel_2.add(btnNewButton);
+		
+		JLabel lblNewLabel_2 = new JLabel("New label");
+		lblNewLabel_2.setForeground(Color.WHITE);
+		panel_2.add(lblNewLabel_2);
+		
+		JButton btnNewButton_1 = new JButton("+");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblNewLabel_2.setVisible(false);
+				btnNewButton_1.setVisible(false);
+				lblNewLabel_16.setVisible(true);
+				
+				chckbxNewCheckBox_1.setVisible(true);
+				frame.revalidate();
+			}
+		});
+		btnNewButton_1.setBackground(Color.WHITE);
+		panel_2.add(btnNewButton_1);
+		
+		JLabel lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.setForeground(Color.WHITE);
+		panel_2.add(lblNewLabel_3);
+		
+		JButton btnNewButton_2 = new JButton("+");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblNewLabel_3.setVisible(false);
+				btnNewButton_2.setVisible(false);
+				lblNewLabel_17.setVisible(true);
+				
+				chckbxNewCheckBox_2.setVisible(true);
+				frame.revalidate();
+			}
+		});
+		btnNewButton_2.setBackground(Color.WHITE);
+		panel_2.add(btnNewButton_2);
+		
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setForeground(Color.WHITE);
+		panel_2.add(lblNewLabel_4);
+		
+		JButton btnNewButton_3 = new JButton("+");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblNewLabel_4.setVisible(false);
+				btnNewButton_3.setVisible(false);
+				lblNewLabel_18.setVisible(true);
+				
+				chckbxNewCheckBox_3.setVisible(true);
+				frame.revalidate();
+			}
+		});
+		btnNewButton_3.setBackground(Color.WHITE);
+		panel_2.add(btnNewButton_3);
+		
+		JLabel lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setForeground(Color.WHITE);
+		panel_2.add(lblNewLabel_5);
+		
+		JButton btnNewButton_4 = new JButton("+");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblNewLabel_5.setVisible(false);
+				btnNewButton_4.setVisible(false);
+				lblNewLabel_19.setVisible(true);
+				
+				chckbxNewCheckBox_4.setVisible(true);
+				frame.revalidate();
+			}
+		});
+		btnNewButton_4.setBackground(Color.WHITE);
+		panel_2.add(btnNewButton_4);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setForeground(Color.WHITE);
+		panel_2.add(lblNewLabel_6);
+		
+		JButton btnNewButton_5 = new JButton("+");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblNewLabel_6.setVisible(false);
+				btnNewButton_5.setVisible(false);
+				lblNewLabel_20.setVisible(true);
+				
+				chckbxNewCheckBox_5.setVisible(true);
+				frame.revalidate();
+			}
+		});
+		btnNewButton_5.setBackground(Color.WHITE);
+		panel_2.add(btnNewButton_5);
+		
+		JLabel lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7.setForeground(Color.WHITE);
+		panel_2.add(lblNewLabel_7);
+		
+		JButton btnNewButton_6 = new JButton("+");
+		btnNewButton_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblNewLabel_7.setVisible(false);
+				btnNewButton_6.setVisible(false);
+				lblNewLabel_21.setVisible(true);
+				
+				chckbxNewCheckBox_6.setVisible(true);
+				frame.revalidate();
+			}
+		});
+		btnNewButton_6.setBackground(Color.WHITE);
+		panel_2.add(btnNewButton_6);
+		
+		JLabel lblNewLabel_8 = new JLabel("New label");
+		lblNewLabel_8.setForeground(Color.WHITE);
+		panel_2.add(lblNewLabel_8);
+		
+		JButton btnNewButton_7 = new JButton("+");
+		btnNewButton_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblNewLabel_8.setVisible(false);
+				btnNewButton_7.setVisible(false);
+				lblNewLabel_22.setVisible(true);
+				
+				chckbxNewCheckBox_7.setVisible(true);
+				frame.revalidate();
+			}
+		});
+		btnNewButton_7.setBackground(Color.WHITE);
+		panel_2.add(btnNewButton_7);
+		
+		JLabel lblNewLabel_9 = new JLabel("New label");
+		lblNewLabel_9.setForeground(Color.WHITE);
+		panel_2.add(lblNewLabel_9);
+		
+		JButton btnNewButton_8 = new JButton("+");
+		btnNewButton_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblNewLabel_9.setVisible(false);
+				btnNewButton_8.setVisible(false);
+				lblNewLabel_23.setVisible(true);
+				
+				chckbxNewCheckBox_8.setVisible(true);
+				frame.revalidate();
+			}
+		});
+		btnNewButton_8.setBackground(Color.WHITE);
+		panel_2.add(btnNewButton_8);
+		
+		JLabel lblNewLabel_10 = new JLabel("New label");
+		lblNewLabel_10.setForeground(Color.WHITE);
+		panel_2.add(lblNewLabel_10);
+		
+		JButton btnNewButton_9 = new JButton("+");
+		btnNewButton_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblNewLabel_10.setVisible(false);
+				btnNewButton_9.setVisible(false);
+				lblNewLabel_24.setVisible(true);
+				
+				chckbxNewCheckBox_9.setVisible(true);
+				frame.revalidate();
+	
+			}
+		});
+		btnNewButton_9.setBackground(Color.WHITE);
+		panel_2.add(btnNewButton_9);
+		
+		panel_3 = new JPanel();
+		panel_3.setBackground(Color.DARK_GRAY);
+		panel_1.add(panel_3, BorderLayout.CENTER);
+		panel_3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "shipments added", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Font", 0, 18),Color.red));
+		panel_3.setLayout(new GridLayout(10, 2, 0, 0));
+		
+		lblNewLabel_12 = new JLabel("New label");
+		lblNewLabel_12.setForeground(Color.WHITE);
+		panel_3.add(lblNewLabel_12);
+		
+		 chckbxNewCheckBox = new JCheckBox("");
+		chckbxNewCheckBox.setBackground(Color.DARK_GRAY);
+		panel_3.add(chckbxNewCheckBox);
+		
+		lblNewLabel_16 = new JLabel("New label");
+		lblNewLabel_16.setForeground(Color.WHITE);
+		panel_3.add(lblNewLabel_16);
+		
+		chckbxNewCheckBox_1 = new JCheckBox("");
+		chckbxNewCheckBox_1.setBackground(Color.DARK_GRAY);
+		panel_3.add(chckbxNewCheckBox_1);
+		
+		lblNewLabel_17 = new JLabel("New label");
+		lblNewLabel_17.setForeground(Color.WHITE);
+		panel_3.add(lblNewLabel_17);
+		
+		chckbxNewCheckBox_2 = new JCheckBox("");
+		chckbxNewCheckBox_2.setBackground(Color.DARK_GRAY);
+		panel_3.add(chckbxNewCheckBox_2);
+		
+		 lblNewLabel_18 = new JLabel("New label");
+		lblNewLabel_18.setForeground(Color.WHITE);
+		panel_3.add(lblNewLabel_18);
+		
+		chckbxNewCheckBox_3 = new JCheckBox("");
+		chckbxNewCheckBox_3.setBackground(Color.DARK_GRAY);
+		panel_3.add(chckbxNewCheckBox_3);
+		
+		lblNewLabel_19 = new JLabel("New label");
+		lblNewLabel_19.setForeground(Color.WHITE);
+		panel_3.add(lblNewLabel_19);
+		
+		chckbxNewCheckBox_4 = new JCheckBox("");
+		chckbxNewCheckBox_4.setBackground(Color.DARK_GRAY);
+		panel_3.add(chckbxNewCheckBox_4);
+		
+		lblNewLabel_20 = new JLabel("New label");
+		lblNewLabel_20.setForeground(Color.WHITE);
+		panel_3.add(lblNewLabel_20);
+		
+		chckbxNewCheckBox_5 = new JCheckBox("");
+		chckbxNewCheckBox_5.setBackground(Color.DARK_GRAY);
+		panel_3.add(chckbxNewCheckBox_5);
+		
+		lblNewLabel_21 = new JLabel("New label");
+		lblNewLabel_21.setForeground(Color.WHITE);
+		panel_3.add(lblNewLabel_21);
+		
+		chckbxNewCheckBox_6 = new JCheckBox("");
+		chckbxNewCheckBox_6.setBackground(Color.DARK_GRAY);
+		panel_3.add(chckbxNewCheckBox_6);
+		
+		lblNewLabel_22 = new JLabel("New label");
+		lblNewLabel_22.setForeground(Color.WHITE);
+		panel_3.add(lblNewLabel_22);
+		
+		chckbxNewCheckBox_7 = new JCheckBox("");
+		chckbxNewCheckBox_7.setBackground(Color.DARK_GRAY);
+		panel_3.add(chckbxNewCheckBox_7);
+		
+		lblNewLabel_23 = new JLabel("New label");
+		lblNewLabel_23.setForeground(Color.WHITE);
+		panel_3.add(lblNewLabel_23);
+		
+		chckbxNewCheckBox_8 = new JCheckBox("");
+		chckbxNewCheckBox_8.setBackground(Color.DARK_GRAY);
+		panel_3.add(chckbxNewCheckBox_8);
+		
+		lblNewLabel_24 = new JLabel("New label");
+		lblNewLabel_24.setForeground(Color.WHITE);
+		panel_3.add(lblNewLabel_24);
+		
+		chckbxNewCheckBox_9 = new JCheckBox("");
+		chckbxNewCheckBox_9.setBackground(Color.DARK_GRAY);
+		panel_3.add(chckbxNewCheckBox_9);
+		
+		JPanel panel_4 = new JPanel();
+		panel_4.setBackground(Color.DARK_GRAY);
+		panel_1.add(panel_4, BorderLayout.SOUTH);
+		
+		JPanel panel_5 = new JPanel();
+		panel_5.setBackground(Color.DARK_GRAY);
+		panel_1.add(panel_5, BorderLayout.EAST);
+		panel_5.setLayout(new GridLayout(2,1 , 0, 0));
+		
+		JPanel panel_6 = new JPanel();
+		panel_6.setBackground(Color.DARK_GRAY);
+		panel_5.add(panel_6);
+		panel_6.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		JButton btnNewButton_11 = new JButton("remove");
+		btnNewButton_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(chckbxNewCheckBox.isSelected()) {
+					
+					lblNewLabel_1.setVisible(true);
+					btnNewButton.setVisible(true);
+					lblNewLabel_12.setVisible(false);
+					chckbxNewCheckBox.setVisible(false);
+					frame.revalidate();
+					
+				}
+				if(chckbxNewCheckBox_1.isSelected()) {
+					
+					lblNewLabel_2.setVisible(true);
+					btnNewButton_1.setVisible(true);
+					lblNewLabel_16.setVisible(false);
+					chckbxNewCheckBox_1.setVisible(false);
+					frame.revalidate();
+					
+				}
+				if(chckbxNewCheckBox_2.isSelected()) {
+					
+					lblNewLabel_3.setVisible(true);
+					btnNewButton_2.setVisible(true);
+					lblNewLabel_17.setVisible(false);
+					chckbxNewCheckBox_2.setVisible(false);
+					frame.revalidate();
+					
+				}
+				if(chckbxNewCheckBox_3.isSelected()) {
+					
+					lblNewLabel_4.setVisible(true);
+					btnNewButton_3.setVisible(true);
+					lblNewLabel_18.setVisible(false);
+					chckbxNewCheckBox_3.setVisible(false);
+					frame.revalidate();
+					
+				}
+				if(chckbxNewCheckBox_4.isSelected()) {
+					
+					lblNewLabel_5.setVisible(true);
+					btnNewButton_4.setVisible(true);
+					lblNewLabel_19.setVisible(false);
+					chckbxNewCheckBox_4.setVisible(false);
+					frame.revalidate();
+					
+				}
+				if(chckbxNewCheckBox_5.isSelected()) {
+					
+					lblNewLabel_6.setVisible(true);
+					btnNewButton_5.setVisible(true);
+					lblNewLabel_20.setVisible(false);
+					chckbxNewCheckBox_5.setVisible(false);
+					frame.revalidate();
+					
+				}
+				if(chckbxNewCheckBox_6.isSelected()) {
+					
+					lblNewLabel_7.setVisible(true);
+					btnNewButton_6.setVisible(true);
+					lblNewLabel_21.setVisible(false);
+					chckbxNewCheckBox_6.setVisible(false);
+					frame.revalidate();
+					
+				}
+				if(chckbxNewCheckBox_7.isSelected()) {
+					
+					lblNewLabel_8.setVisible(true);
+					btnNewButton_7.setVisible(true);
+					lblNewLabel_22.setVisible(false);
+					chckbxNewCheckBox_7.setVisible(false);
+					frame.revalidate();
+					
+				}
+				if(chckbxNewCheckBox_8.isSelected()) {
+					
+					lblNewLabel_9.setVisible(true);
+					btnNewButton_8.setVisible(true);
+					lblNewLabel_23.setVisible(false);
+					chckbxNewCheckBox_8.setVisible(false);
+					frame.revalidate();
+					
+				}
+				if(chckbxNewCheckBox_9.isSelected()) {
+					
+					lblNewLabel_10.setVisible(true);
+					btnNewButton_9.setVisible(true);
+					lblNewLabel_24.setVisible(false);
+					chckbxNewCheckBox_9.setVisible(false);
+					frame.revalidate();
+					
+				}
+				
+				
+			}
+		});
+		panel_6.add(btnNewButton_11);
+		
+		JPanel panel_7 = new JPanel();
+		panel_7.setBackground(Color.DARK_GRAY);
+		panel_5.add(panel_7);
+		panel_7.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		JButton btnNewButton_12 = new JButton("tracking");
+		btnNewButton_12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			if(chckbxNewCheckBox.isSelected()) {
+				
+					frame_2[0]=new JFrame();
+					frame_2[0].setVisible(true);
+					
+					frame_2[0].getContentPane().setBackground(Color.DARK_GRAY);
+					frame_2[0].setSize(800,600);
+					
+					JPanel panel_8 = new JPanel();
+					panel_8.setBackground(Color.RED);
+					frame_2[0].getContentPane().add(panel_8, BorderLayout.NORTH);
+					
+					JLabel lblNewLabel = new JLabel("Shipping Company");
+					lblNewLabel.setForeground(Color.WHITE);
+					lblNewLabel.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+					panel_8.add(lblNewLabel);
+					
+					
+					JPanel panel_9 = new JPanel();
+					panel_9.setBackground(Color.DARK_GRAY);
+					frame_2[0].getContentPane().add(panel_9, BorderLayout.CENTER);
+					panel_9.setLayout(new GridLayout(3, 1, 0, 0));
+					
+					JPanel panel_10 = new JPanel();
+					panel_10.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_10);
+					panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_1 = new JLabel("New label");
+					 lblNewLabel_1.setText("your shipment name is :"+name[1]);
+					panel_10.add(lblNewLabel_1);
+				int random=	(int)(Math.random()*((9-0)+1))+0;
+					
+					JPanel panel_11 = new JPanel();
+					panel_11.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_11);
+					panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_2 = new JLabel("New label");
+					lblNewLabel_2.setText("your shipment trevel from  "+location[1]+" to "+text_1[random]);
+					panel_11.add(lblNewLabel_2);
+					
+					JPanel panel_12 = new JPanel();
+					panel_12.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_12);
+					panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_3 = new JLabel("New label");
+					lblNewLabel_3.setText("your shipment nummber is: "+number[1]);
+					
+					panel_12.add(lblNewLabel_3);
+					lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_1.setForeground(Color.WHITE);
+					lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_2.setForeground(Color.WHITE);
+					lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_3.setForeground(Color.WHITE);
+					
+					
+				}
+				if(chckbxNewCheckBox_1.isSelected()) {
+					frame_2[1]=new JFrame();
+					frame_2[1].setVisible(true);
+					
+					frame_2[1].getContentPane().setBackground(Color.DARK_GRAY);
+					frame_2[1].setSize(800,600);
+					
+					JPanel panel_8 = new JPanel();
+					panel_8.setBackground(Color.RED);
+					frame_2[1].getContentPane().add(panel_8, BorderLayout.NORTH);
+					
+					JLabel lblNewLabel = new JLabel("Shipping Company");
+					lblNewLabel.setForeground(Color.WHITE);
+					lblNewLabel.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+					panel_8.add(lblNewLabel);
+					
+					
+					JPanel panel_9 = new JPanel();
+					panel_9.setBackground(Color.DARK_GRAY);
+					frame_2[1].getContentPane().add(panel_9, BorderLayout.CENTER);
+					panel_9.setLayout(new GridLayout(3, 1, 0, 0));
+					
+					JPanel panel_10 = new JPanel();
+					panel_10.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_10);
+					panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_1 = new JLabel("New label");
+					 lblNewLabel_1.setText("your shipment name is :"+name[2]);
+					panel_10.add(lblNewLabel_1);
+				int random=	(int)(Math.random()*((9-0)+1))+0;
+					
+					JPanel panel_11 = new JPanel();
+					panel_11.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_11);
+					panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_2 = new JLabel("New label");
+					lblNewLabel_2.setText("your shipment trevel from  "+location[2]+" to "+text_1[random]);
+					panel_11.add(lblNewLabel_2);
+					
+					JPanel panel_12 = new JPanel();
+					panel_12.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_12);
+					panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_3 = new JLabel("New label");
+					lblNewLabel_3.setText("your shipment nummber is: "+number[2]);
+					
+					panel_12.add(lblNewLabel_3);
+					lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_1.setForeground(Color.WHITE);
+					lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_2.setForeground(Color.WHITE);
+					lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_3.setForeground(Color.WHITE);
+					
+				}
+				if(chckbxNewCheckBox_2.isSelected()) {
+					frame_2[2]=new JFrame();
+					frame_2[2].setVisible(true);
+					
+					frame_2[2].getContentPane().setBackground(Color.DARK_GRAY);
+					frame_2[2].setSize(800,600);
+					
+					JPanel panel_8 = new JPanel();
+					panel_8.setBackground(Color.RED);
+					frame_2[2].getContentPane().add(panel_8, BorderLayout.NORTH);
+					
+					JLabel lblNewLabel = new JLabel("Shipping Company");
+					lblNewLabel.setForeground(Color.WHITE);
+					lblNewLabel.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+					panel_8.add(lblNewLabel);
+					
+					
+					JPanel panel_9 = new JPanel();
+					panel_9.setBackground(Color.DARK_GRAY);
+					frame_2[2].getContentPane().add(panel_9, BorderLayout.CENTER);
+					panel_9.setLayout(new GridLayout(3, 1, 0, 0));
+					
+					JPanel panel_10 = new JPanel();
+					panel_10.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_10);
+					panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_1 = new JLabel("New label");
+					 lblNewLabel_1.setText("your shipment name is :"+name[3]);
+					panel_10.add(lblNewLabel_1);
+				int random=	(int)(Math.random()*((9-0)+1))+0;
+					
+					JPanel panel_11 = new JPanel();
+					panel_11.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_11);
+					panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_2 = new JLabel("New label");
+					lblNewLabel_2.setText("your shipment trevel from  "+location[3]+" to "+text_1[random]);
+					panel_11.add(lblNewLabel_2);
+					
+					JPanel panel_12 = new JPanel();
+					panel_12.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_12);
+					panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_3 = new JLabel("New label");
+					lblNewLabel_3.setText("your shipment nummber is: "+number[3]);
+					
+					panel_12.add(lblNewLabel_3);
+					lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_1.setForeground(Color.WHITE);
+					lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_2.setForeground(Color.WHITE);
+					lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_3.setForeground(Color.WHITE);
+					
+				}
+				if(chckbxNewCheckBox_3.isSelected()) {
+					frame_2[3]=new JFrame();
+					frame_2[3].setVisible(true);
+					
+					frame_2[3].getContentPane().setBackground(Color.DARK_GRAY);
+					frame_2[3].setSize(800,600);
+					
+					JPanel panel_8 = new JPanel();
+					panel_8.setBackground(Color.RED);
+					frame_2[3].getContentPane().add(panel_8, BorderLayout.NORTH);
+					
+					JLabel lblNewLabel = new JLabel("Shipping Company");
+					lblNewLabel.setForeground(Color.WHITE);
+					lblNewLabel.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+					panel_8.add(lblNewLabel);
+					
+					
+					JPanel panel_9 = new JPanel();
+					panel_9.setBackground(Color.DARK_GRAY);
+					frame_2[3].getContentPane().add(panel_9, BorderLayout.CENTER);
+					panel_9.setLayout(new GridLayout(3, 1, 0, 0));
+					
+					JPanel panel_10 = new JPanel();
+					panel_10.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_10);
+					panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_1 = new JLabel("New label");
+					 lblNewLabel_1.setText("your shipment name is :"+name[4]);
+					panel_10.add(lblNewLabel_1);
+				int random=	(int)(Math.random()*((9-0)+1))+0;
+					
+					JPanel panel_11 = new JPanel();
+					panel_11.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_11);
+					panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_2 = new JLabel("New label");
+					lblNewLabel_2.setText("your shipment trevel from  "+location[4]+" to "+text_1[random]);
+					panel_11.add(lblNewLabel_2);
+					
+					JPanel panel_12 = new JPanel();
+					panel_12.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_12);
+					panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_3 = new JLabel("New label");
+					lblNewLabel_3.setText("your shipment nummber is: "+number[4]);
+					
+					panel_12.add(lblNewLabel_3);
+					lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_1.setForeground(Color.WHITE);
+					lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_2.setForeground(Color.WHITE);
+					lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_3.setForeground(Color.WHITE);
+					
+				}
+				if(chckbxNewCheckBox_4.isSelected()) {
+					frame_2[4]=new JFrame();
+					frame_2[4].setVisible(true);
+					
+					frame_2[4].getContentPane().setBackground(Color.DARK_GRAY);
+					frame_2[4].setSize(800,600);
+					
+					JPanel panel_8 = new JPanel();
+					panel_8.setBackground(Color.RED);
+					frame_2[4].getContentPane().add(panel_8, BorderLayout.NORTH);
+					
+					JLabel lblNewLabel = new JLabel("Shipping Company");
+					lblNewLabel.setForeground(Color.WHITE);
+					lblNewLabel.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+					panel_8.add(lblNewLabel);
+					
+					
+					JPanel panel_9 = new JPanel();
+					panel_9.setBackground(Color.DARK_GRAY);
+					frame_2[4].getContentPane().add(panel_9, BorderLayout.CENTER);
+					panel_9.setLayout(new GridLayout(3, 1, 0, 0));
+					
+					JPanel panel_10 = new JPanel();
+					panel_10.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_10);
+					panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_1 = new JLabel("New label");
+					 lblNewLabel_1.setText("your shipment name is :"+name[5]);
+					panel_10.add(lblNewLabel_1);
+				int random=	(int)(Math.random()*((9-0)+1))+0;
+					
+					JPanel panel_11 = new JPanel();
+					panel_11.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_11);
+					panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_2 = new JLabel("New label");
+					lblNewLabel_2.setText("your shipment trevel from  "+location[5]+" to "+text_1[random]);
+					panel_11.add(lblNewLabel_2);
+					
+					JPanel panel_12 = new JPanel();
+					panel_12.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_12);
+					panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_3 = new JLabel("New label");
+					lblNewLabel_3.setText("your shipment nummber is: "+number[5]);
+					
+					panel_12.add(lblNewLabel_3);
+					lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_1.setForeground(Color.WHITE);
+					lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_2.setForeground(Color.WHITE);
+					lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_3.setForeground(Color.WHITE);
+				}
+				if(chckbxNewCheckBox_5.isSelected()) {
+					
+					frame_2[5]=new JFrame();
+					frame_2[5].setVisible(true);
+					
+					frame_2[5].getContentPane().setBackground(Color.DARK_GRAY);
+					frame_2[5].setSize(800,600);
+					
+					JPanel panel_8 = new JPanel();
+					panel_8.setBackground(Color.RED);
+					frame_2[5].getContentPane().add(panel_8, BorderLayout.NORTH);
+					
+					JLabel lblNewLabel = new JLabel("Shipping Company");
+					lblNewLabel.setForeground(Color.WHITE);
+					lblNewLabel.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+					panel_8.add(lblNewLabel);
+					
+					
+					JPanel panel_9 = new JPanel();
+					panel_9.setBackground(Color.DARK_GRAY);
+					frame_2[5].getContentPane().add(panel_9, BorderLayout.CENTER);
+					panel_9.setLayout(new GridLayout(3, 1, 0, 0));
+					
+					JPanel panel_10 = new JPanel();
+					panel_10.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_10);
+					panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_1 = new JLabel("New label");
+					 lblNewLabel_1.setText("your shipment name is :"+name[6]);
+					panel_10.add(lblNewLabel_1);
+				int random=	(int)(Math.random()*((9-0)+1))+0;
+					
+					JPanel panel_11 = new JPanel();
+					panel_11.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_11);
+					panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_2 = new JLabel("New label");
+					lblNewLabel_2.setText("your shipment trevel from  "+location[6]+" to "+text_1[random]);
+					panel_11.add(lblNewLabel_2);
+					
+					JPanel panel_12 = new JPanel();
+					panel_12.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_12);
+					panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_3 = new JLabel("New label");
+					lblNewLabel_3.setText("your shipment nummber is: "+number[6]);
+					
+					panel_12.add(lblNewLabel_3);
+					lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_1.setForeground(Color.WHITE);
+					lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_2.setForeground(Color.WHITE);
+					lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_3.setForeground(Color.WHITE);
+					
+				}
+				if(chckbxNewCheckBox_6.isSelected()) {
+					
+					frame_2[6]=new JFrame();
+					frame_2[6].setVisible(true);
+					
+					frame_2[6].getContentPane().setBackground(Color.DARK_GRAY);
+					frame_2[6].setSize(800,600);
+					
+					JPanel panel_8 = new JPanel();
+					panel_8.setBackground(Color.RED);
+					frame_2[6].getContentPane().add(panel_8, BorderLayout.NORTH);
+					
+					JLabel lblNewLabel = new JLabel("Shipping Company");
+					lblNewLabel.setForeground(Color.WHITE);
+					lblNewLabel.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+					panel_8.add(lblNewLabel);
+					
+					
+					JPanel panel_9 = new JPanel();
+					panel_9.setBackground(Color.DARK_GRAY);
+					frame_2[6].getContentPane().add(panel_9, BorderLayout.CENTER);
+					panel_9.setLayout(new GridLayout(3, 1, 0, 0));
+					
+					JPanel panel_10 = new JPanel();
+					panel_10.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_10);
+					panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_1 = new JLabel("New label");
+					 lblNewLabel_1.setText("your shipment name is :"+name[7]);
+					panel_10.add(lblNewLabel_1);
+				int random=	(int)(Math.random()*((9-0)+1))+0;
+					
+					JPanel panel_11 = new JPanel();
+					panel_11.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_11);
+					panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_2 = new JLabel("New label");
+					lblNewLabel_2.setText("your shipment trevel from  "+location[7]+" to "+text_1[random]);
+					panel_11.add(lblNewLabel_2);
+					
+					JPanel panel_12 = new JPanel();
+					panel_12.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_12);
+					panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_3 = new JLabel("New label");
+					lblNewLabel_3.setText("your shipment nummber is: "+number[7]);
+					
+					panel_12.add(lblNewLabel_3);
+					lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_1.setForeground(Color.WHITE);
+					lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_2.setForeground(Color.WHITE);
+					lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_3.setForeground(Color.WHITE);
+				}
+				if(chckbxNewCheckBox_7.isSelected()) {
+					
+					
+					frame_2[7]=new JFrame();
+					frame_2[7].setVisible(true);
+					
+					frame_2[7].getContentPane().setBackground(Color.DARK_GRAY);
+					frame_2[7].setSize(800,600);
+					
+					JPanel panel_8 = new JPanel();
+					panel_8.setBackground(Color.RED);
+					frame_2[7].getContentPane().add(panel_8, BorderLayout.NORTH);
+					
+					JLabel lblNewLabel = new JLabel("Shipping Company");
+					lblNewLabel.setForeground(Color.WHITE);
+					lblNewLabel.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+					panel_8.add(lblNewLabel);
+					
+					
+					JPanel panel_9 = new JPanel();
+					panel_9.setBackground(Color.DARK_GRAY);
+					frame_2[7].getContentPane().add(panel_9, BorderLayout.CENTER);
+					panel_9.setLayout(new GridLayout(3, 1, 0, 0));
+					
+					JPanel panel_10 = new JPanel();
+					panel_10.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_10);
+					panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_1 = new JLabel("New label");
+					 lblNewLabel_1.setText("your shipment name is :"+name[8]);
+					panel_10.add(lblNewLabel_1);
+				int random=	(int)(Math.random()*((9-0)+1))+0;
+					
+					JPanel panel_11 = new JPanel();
+					panel_11.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_11);
+					panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_2 = new JLabel("New label");
+					lblNewLabel_2.setText("your shipment trevel from  "+location[8]+" to "+text_1[random]);
+					panel_11.add(lblNewLabel_2);
+					
+					JPanel panel_12 = new JPanel();
+					panel_12.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_12);
+					panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_3 = new JLabel("New label");
+					lblNewLabel_3.setText("your shipment nummber is: "+number[8]);
+					
+					panel_12.add(lblNewLabel_3);
+					lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_1.setForeground(Color.WHITE);
+					lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_2.setForeground(Color.WHITE);
+					lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_3.setForeground(Color.WHITE);
+					
+				}
+				if(chckbxNewCheckBox_8.isSelected()) {
+					
+					frame_2[8]=new JFrame();
+					frame_2[8].setVisible(true);
+					
+					frame_2[8].getContentPane().setBackground(Color.DARK_GRAY);
+					frame_2[8].setSize(800,600);
+					
+					JPanel panel_8 = new JPanel();
+					panel_8.setBackground(Color.RED);
+					frame_2[8].getContentPane().add(panel_8, BorderLayout.NORTH);
+					
+					JLabel lblNewLabel = new JLabel("Shipping Company");
+					lblNewLabel.setForeground(Color.WHITE);
+					lblNewLabel.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+					panel_8.add(lblNewLabel);
+					
+					
+					JPanel panel_9 = new JPanel();
+					panel_9.setBackground(Color.DARK_GRAY);
+					frame_2[8].getContentPane().add(panel_9, BorderLayout.CENTER);
+					panel_9.setLayout(new GridLayout(3, 1, 0, 0));
+					
+					JPanel panel_10 = new JPanel();
+					panel_10.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_10);
+					panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_1 = new JLabel("New label");
+					 lblNewLabel_1.setText("your shipment name is :"+name[9]);
+					panel_10.add(lblNewLabel_1);
+				int random=	(int)(Math.random()*((9-0)+1))+0;
+					
+					JPanel panel_11 = new JPanel();
+					panel_11.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_11);
+					panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_2 = new JLabel("New label");
+					lblNewLabel_2.setText("your shipment trevel from  "+location[9]+" to "+text_1[random]);
+					panel_11.add(lblNewLabel_2);
+					
+					JPanel panel_12 = new JPanel();
+					panel_12.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_12);
+					panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_3 = new JLabel("New label");
+					lblNewLabel_3.setText("your shipment nummber is: "+number[9]);
+					
+					panel_12.add(lblNewLabel_3);
+					lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_1.setForeground(Color.WHITE);
+					lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_2.setForeground(Color.WHITE);
+					lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_3.setForeground(Color.WHITE);
+					
+				}
+				if(chckbxNewCheckBox_9.isSelected()) {
+					frame_2[9]=new JFrame();
+					frame_2[9].setVisible(true);
+					
+					frame_2[9].getContentPane().setBackground(Color.DARK_GRAY);
+					frame_2[9].setSize(800,600);
+					
+					JPanel panel_8 = new JPanel();
+					panel_8.setBackground(Color.RED);
+					frame_2[9].getContentPane().add(panel_8, BorderLayout.NORTH);
+					
+					JLabel lblNewLabel = new JLabel("Shipping Company");
+					lblNewLabel.setForeground(Color.WHITE);
+					lblNewLabel.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+					panel_8.add(lblNewLabel);
+					
+					
+					JPanel panel_9 = new JPanel();
+					panel_9.setBackground(Color.DARK_GRAY);
+					frame_2[9].getContentPane().add(panel_9, BorderLayout.CENTER);
+					panel_9.setLayout(new GridLayout(3, 1, 0, 0));
+					
+					JPanel panel_10 = new JPanel();
+					panel_10.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_10);
+					panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_1 = new JLabel("New label");
+					 lblNewLabel_1.setText("your shipment name is :"+name[10]);
+					panel_10.add(lblNewLabel_1);
+				int random=	(int)(Math.random()*((9-0)+1))+0;
+					
+					JPanel panel_11 = new JPanel();
+					panel_11.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_11);
+					panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_2 = new JLabel("New label");
+					lblNewLabel_2.setText("your shipment trevel from  "+location[10]+" to "+text_1[random]);
+					panel_11.add(lblNewLabel_2);
+					
+					JPanel panel_12 = new JPanel();
+					panel_12.setBackground(Color.DARK_GRAY);
+					panel_9.add(panel_12);
+					panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+					
+					JLabel lblNewLabel_3 = new JLabel("New label");
+					lblNewLabel_3.setText("your shipment nummber is: "+number[10]);
+					
+					panel_12.add(lblNewLabel_3);
+					lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_1.setForeground(Color.WHITE);
+					lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_2.setForeground(Color.WHITE);
+					lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 34));
+					lblNewLabel_3.setForeground(Color.WHITE);
+					
+				}
+				
+			}
+		});
+		panel_7.add(btnNewButton_12);
+		
+		lblNewLabel_11 = new JLabel("New label");
+		
+		
+		btnNewButton_10 = new JButton("New button");
+	
+		
+		JPanel panel_8 = new JPanel();
+		panel_8.setBackground(Color.RED);
+		frame_1.getContentPane().add(panel_8, BorderLayout.NORTH);
+		JLabel lblNewLabel_11 = new JLabel("Shipping Company");
+		lblNewLabel_11.setFont(new Font("Franklin Gothic Demi Cond", Font.BOLD, 61));
+		lblNewLabel_11.setForeground(Color.WHITE);
+		panel_8.add(lblNewLabel_11);
+		
+		JPanel panel_9 = new JPanel();
+		panel_9.setBackground(Color.DARK_GRAY);
+		frame_1.getContentPane().add(panel_9, BorderLayout.CENTER);
+		panel_9.setLayout(new GridLayout(5, 1, 0, 0));
+		
+		JPanel panel_10 = new JPanel();
+		panel_10.setBackground(Color.DARK_GRAY);
+		panel_9.add(panel_10);
+		panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		JLabel lblNewLabel12 = new JLabel("shipment Name");
+		lblNewLabel12.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		lblNewLabel12.setForeground(Color.WHITE);
+		panel_10.add(lblNewLabel12);
+		
+		textField = new JTextField();
+		panel_10.add(textField);
+		textField.setColumns(50);
+		
+		JPanel panel_11 = new JPanel();
+		panel_11.setBackground(Color.DARK_GRAY);
+		panel_9.add(panel_11);
+		panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		JLabel lblNewLabel_13 = new JLabel("Origin location");
+		lblNewLabel_13.setFont(new Font("Tahoma", Font.PLAIN, 29));
+		lblNewLabel_13.setForeground(Color.WHITE);
+		
+		panel_11.add(lblNewLabel_13);
+		
+		textField_1 = new JTextField();
+		panel_11.add(textField_1);
+		textField_1.setColumns(50);
+		
+		JPanel panel_12 = new JPanel();
+		panel_12.setBackground(Color.DARK_GRAY);
+		panel_9.add(panel_12);
+		panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		JLabel lblNewLabel_14 = new JLabel("shipments number");
+		lblNewLabel_14.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		lblNewLabel_14.setForeground(Color.WHITE);
+		panel_12.add(lblNewLabel_14);
+		
+		textField_2 = new JTextField();
+		panel_12.add(textField_2);
+		textField_2.setColumns(50);
+		
+		JPanel panel_13 = new JPanel();
+		panel_13.setBackground(Color.DARK_GRAY);
+		panel_9.add(panel_13);
+		
+		JButton btnNewButton_13 = new JButton("ADD Item");
+		btnNewButton_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textField.getText().isEmpty()) {
+					text+="you should add Shipping Company, ";
+				}
+				if(textField_1.getText().isEmpty()) {
+					text+="you should add Origin location, ";
+					
+				}
+				if(textField_2.getText().isEmpty()) {
+					text+="you should add shipments number";
+					
+				}
+				
+				if (!textField.getText().isEmpty()&&!textField_1.getText().isEmpty()&&!textField_2.getText().isEmpty()&&counter<=10) {
+					name[counter]=textField.getText();
+					location[counter]=textField_1.getText();
+					number[counter]=textField_2.getText();
+					frame.setVisible(true);
+					if(counter==1) {
+						lblNewLabel_1.setText(name[counter]);
+						lblNewLabel_1.setVisible(true);
+						btnNewButton.setVisible(true);
+						lblNewLabel_12.setText(name[counter]);
+					}else if(counter==2) {
+						
+						lblNewLabel_2.setText(name[counter]);
+						lblNewLabel_2.setVisible(true);
+						btnNewButton_1.setVisible(true);
+						lblNewLabel_16.setText(name[counter]);
+					}else if(counter==3) {
+						lblNewLabel_3.setText(name[counter]);
+						lblNewLabel_3.setVisible(true);
+						btnNewButton_2.setVisible(true);
+						lblNewLabel_17.setText(name[counter]);
+						
+					}else if(counter==4) {
+						lblNewLabel_4.setText(name[counter]);
+						lblNewLabel_4.setVisible(true);
+						btnNewButton_3.setVisible(true);
+						lblNewLabel_18.setText(name[counter]);
+						
+					}else if(counter==5) {
+						
+						lblNewLabel_5.setText(name[counter]);
+						lblNewLabel_5.setVisible(true);
+						btnNewButton_4.setVisible(true);
+						lblNewLabel_19.setText(name[counter]);
+					}else if(counter==6) {
+						
+						lblNewLabel_6.setText(name[counter]);
+						lblNewLabel_6.setVisible(true);
+						btnNewButton_5.setVisible(true);
+						lblNewLabel_20.setText(name[counter]);
+					}else if(counter==7) {
+						lblNewLabel_7.setText(name[counter]);
+						lblNewLabel_7.setVisible(true);
+						btnNewButton_6.setVisible(true);
+						lblNewLabel_21.setText(name[counter]);
+						
+					}else if(counter==8) {
+						lblNewLabel_8.setText(name[counter]);
+						lblNewLabel_8.setVisible(true);
+						btnNewButton_7.setVisible(true);
+						lblNewLabel_22.setText(name[counter]);
+						
+					}else if(counter==9) {
+						
+						lblNewLabel_9.setText(name[counter]);
+						lblNewLabel_9.setVisible(true);
+						btnNewButton_8.setVisible(true);
+						lblNewLabel_23.setText(name[counter]);
+					}else if(counter==10) {
+						lblNewLabel_10.setText(name[counter]);
+						lblNewLabel_10.setVisible(true);
+						btnNewButton_9.setVisible(true);
+						lblNewLabel_24.setText(name[counter]);
+						
+					}
+				counter++;
+				}if(counter>=10) {
+					text+=" ,you can't add more than 10 item";
+					
+				}
+			
+				lblNewLabel_15.setText(text);
+				frame_1.revalidate();
+				text=" ";
+
+
+			}
+		});
+		btnNewButton_13.setFont(new Font("Tahoma", Font.PLAIN, 50));
+		btnNewButton_13.setBackground(Color.WHITE);
+		btnNewButton_13.setForeground(Color.BLACK);
+		panel_13.add(btnNewButton_13);
+		
+		JPanel panel_14 = new JPanel();
+		panel_14.setBackground(Color.DARK_GRAY);
+		
+		panel_9.add(panel_14);
+		
+		
+		lblNewLabel_15 = new JLabel("");
+		lblNewLabel_15.setForeground(Color.WHITE);
+		lblNewLabel_15.setFont(new Font("Lucida Handwriting", Font.PLAIN, 13));
+		panel_14.add(lblNewLabel_15);
+	
+		
+		lblNewLabel_1.setVisible(false);
+		btnNewButton.setVisible(false);
+		lblNewLabel_2.setVisible(false);
+		btnNewButton_1.setVisible(false);
+		lblNewLabel_3.setVisible(false);
+		btnNewButton_2.setVisible(false);
+		lblNewLabel_4.setVisible(false);
+		btnNewButton_3.setVisible(false);
+		lblNewLabel_5.setVisible(false);
+		btnNewButton_4.setVisible(false);
+		lblNewLabel_6.setVisible(false);
+		btnNewButton_5.setVisible(false);
+		lblNewLabel_7.setVisible(false);
+		btnNewButton_6.setVisible(false);
+		lblNewLabel_8.setVisible(false);
+		btnNewButton_7.setVisible(false);
+		lblNewLabel_9.setVisible(false);
+		btnNewButton_8.setVisible(false);
+		lblNewLabel_10.setVisible(false);
+		btnNewButton_9.setVisible(false);
+		lblNewLabel_12.setVisible(false);
+		lblNewLabel_16.setVisible(false);
+		lblNewLabel_17.setVisible(false);
+		lblNewLabel_18.setVisible(false);
+		lblNewLabel_19.setVisible(false);
+		lblNewLabel_20.setVisible(false);
+		lblNewLabel_21.setVisible(false);
+		lblNewLabel_22.setVisible(false);
+		lblNewLabel_23.setVisible(false);
+		lblNewLabel_24.setVisible(false);
+		chckbxNewCheckBox.setVisible(false);
+		chckbxNewCheckBox_1.setVisible(false);
+		chckbxNewCheckBox_2.setVisible(false);
+		chckbxNewCheckBox_3.setVisible(false);
+		chckbxNewCheckBox_4.setVisible(false);
+		chckbxNewCheckBox_5.setVisible(false);
+		chckbxNewCheckBox_6.setVisible(false);
+		chckbxNewCheckBox_7.setVisible(false);
+		chckbxNewCheckBox_8.setVisible(false);
+		chckbxNewCheckBox_9.setVisible(false);
+		
+}
+    public static void main(String[] args) {
+       new JavaApplication47(); 
+    }
+    
+}
