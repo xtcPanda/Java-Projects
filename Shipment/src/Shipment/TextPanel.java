@@ -5,7 +5,9 @@
  */
 package Shipment;
 
+import java.awt.BorderLayout;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 /**
@@ -18,6 +20,11 @@ public class TextPanel extends JPanel {
     
     public TextPanel(){
         textArea = new JTextArea();
+        
+        setLayout(new BorderLayout());
+        //scroll bars
+        add(new JScrollPane(textArea), BorderLayout.CENTER);
+        
     }
     
 }
