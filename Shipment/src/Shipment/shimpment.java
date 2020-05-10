@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pizzashop;
+package Shipment;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
@@ -13,7 +13,7 @@ import javax.swing.SwingUtilities;
  *
  * @author mo3az
  */
-public class PizzaShop{
+public class shimpment{
 
     /**
      * @param args the command line arguments
