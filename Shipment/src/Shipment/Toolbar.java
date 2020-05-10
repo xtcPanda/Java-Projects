@@ -5,6 +5,8 @@
  */
 package Shipment;
 
+import java.awt.FlowLayout;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
@@ -13,7 +15,18 @@ import javax.swing.JPanel;
  */
 public class Toolbar extends JPanel{
     
+    private JButton helloBtn;
+    private JButton GNBtn;
+    
     public Toolbar(){
+        helloBtn = new JButton("Hello!");
+        GNBtn = new JButton("Good Night!");
+        
+        //not going to use the borderlayout cuz i want them next to each other
+        setLayout(new FlowLayout());
+        
+        add(helloBtn);
+        add(GNBtn);
         
     }
 }
