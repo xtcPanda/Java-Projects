@@ -36,7 +36,7 @@ public class FrameLayout extends JFrame {
             //this method runs when the btn is clicked
             @Override
             public void actionPerformed(ActionEvent e) {
-            
+                textpanel.AppendText("TEXT\n");
             }
         });
         
