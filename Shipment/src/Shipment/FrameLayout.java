@@ -6,15 +6,25 @@
 package Shipment;
 
 //importing the lib we need
+import java.awt.BorderLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JTextArea;
 
 //editing the JFrame class in a child class
 public class FrameLayout extends JFrame {
+    //adding components
+    private JTextArea text;
+    private JButton btn;
+    
     //adding a constructor for the class
     public FrameLayout(){
         //calling the constructor for the parent class with super
         //adding a title to it
         super("Shipment Company GUI");
+        
+        setLayout(new BorderLayout());
+        
         //setting the size for the window
         setSize(600,600);
         //configuring the exit btn
