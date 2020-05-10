@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Shipment;
+//Hi im a comment
 
 //importing the lib we need
 import java.awt.BorderLayout;
