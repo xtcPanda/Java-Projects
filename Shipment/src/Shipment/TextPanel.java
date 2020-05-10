@@ -6,11 +6,18 @@
 package Shipment;
 
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 /**
  *
  * @author mo3az
  */
 public class TextPanel extends JPanel {
+    
+    private JTextArea textArea;
+    
+    public TextPanel(){
+        textArea = new JTextArea();
+    }
     
 }
