@@ -34,6 +34,8 @@ public class FrameLayout extends JFrame {
         textpanel = new TextPanel();
         btn = new JButton("Click me!");
         
+        toolBar.setTextPanel(textpanel);
+        
         btn.addActionListener(new ActionListener(){
             //this method runs when the btn is clicked
             @Override

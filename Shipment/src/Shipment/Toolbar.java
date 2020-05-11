@@ -6,21 +6,27 @@
 package Shipment;
 
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
  *
- * @author mo3az
+ * @author mo3az 
  */
-public class Toolbar extends JPanel{
+public class Toolbar extends JPanel implements  ActionListener{
     
     private JButton helloBtn;
     private JButton GNBtn;
+    private TextPanel textpanel;
     
     public Toolbar(){
         helloBtn = new JButton("Hello!");
         GNBtn = new JButton("Good Night!");
+        
+        helloBtn.addActionListener(this);
+        GNBtn.addActionListener(this);
         
         //not going to use the borderlayout cuz i want them next to each other
         setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -28,5 +34,23 @@ public class Toolbar extends JPanel{
         add(helloBtn);
         add(GNBtn);
         
+    }
+    
+    public void setTextPanel(TextPanel textpanel){
+        this.textpanel = textpanel;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+      JButton clicked = (JButton)e.getSource();
+      
+      if(clicked == helloBtn){
+          textpanel.AppendText("HELLO");
+      }else if(clicked == GNBtn){
+          textpanel.AppendText("GN !");
+      }else{
+          textpanel.AppendText("well who ?");
+      }
+          
     }
 }
