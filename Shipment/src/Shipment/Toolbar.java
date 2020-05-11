@@ -23,7 +23,7 @@ public class Toolbar extends JPanel{
         GNBtn = new JButton("Good Night!");
         
         //not going to use the borderlayout cuz i want them next to each other
-        setLayout(new FlowLayout());
+        setLayout(new FlowLayout(FlowLayout.LEFT));
         
         add(helloBtn);
         add(GNBtn);
