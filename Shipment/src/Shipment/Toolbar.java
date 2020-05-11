@@ -13,44 +13,48 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author mo3az 
+ * @author mo3az
  */
 public class Toolbar extends JPanel implements  ActionListener{
-    
+
     private JButton helloBtn;
     private JButton GNBtn;
-    private TextPanel textpanel;
-    
+    private StringListener textListener;
+
     public Toolbar(){
         helloBtn = new JButton("Hello!");
         GNBtn = new JButton("Good Night!");
-        
+
         helloBtn.addActionListener(this);
         GNBtn.addActionListener(this);
-        
+
         //not going to use the borderlayout cuz i want them next to each other
         setLayout(new FlowLayout(FlowLayout.LEFT));
-        
+
         add(helloBtn);
         add(GNBtn);
-        
+
     }
-    
-    public void setTextPanel(TextPanel textpanel){
-        this.textpanel = textpanel;
+
+    public void setStringListener(StringListener listener){
+        this.textListener = listener;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
       JButton clicked = (JButton)e.getSource();
-      
+
       if(clicked == helloBtn){
-          textpanel.AppendText("HELLO");
+          if(textListener != null){
+              textListener.textEmitted("HELLO !\n");
+          }
       }else if(clicked == GNBtn){
-          textpanel.AppendText("GN !");
+          if(textListener != null){
+              textListener.textEmitted("GN !\n");
+          }
       }else{
-          textpanel.AppendText("well who ?");
+//          textpanel.AppendText("well who ?");
       }
-          
+
     }
 }

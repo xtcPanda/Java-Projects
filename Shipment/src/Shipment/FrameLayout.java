@@ -20,6 +20,7 @@ public class FrameLayout extends JFrame {
     //adding components
     private TextPanel textpanel;
     private Toolbar toolBar;
+    private FormPanel formpanel;
     
     //adding a constructor for the class
     public FrameLayout(){
@@ -31,13 +32,20 @@ public class FrameLayout extends JFrame {
         
         toolBar = new Toolbar();
         textpanel = new TextPanel();
+        formpanel = new FormPanel();
         
-        toolBar.setTextPanel(textpanel);
+        toolBar.setStringListener(new StringListener(){
+            @Override
+            public void textEmitted(String text) {
+               textpanel.AppendText(text);
+            }
+        
+        });
         
         
         add(toolBar, BorderLayout.NORTH);
         add(textpanel, BorderLayout.CENTER);
-        
+        add(formpanel, BorderLayout.WEST);
 
         //Set the new frame location
 //        //Get the screen size  
