@@ -19,7 +19,6 @@ import javax.swing.JTextArea;
 public class FrameLayout extends JFrame {
     //adding components
     private TextPanel textpanel;
-    private JButton btn;
     private Toolbar toolBar;
     
     //adding a constructor for the class
@@ -32,21 +31,12 @@ public class FrameLayout extends JFrame {
         
         toolBar = new Toolbar();
         textpanel = new TextPanel();
-        btn = new JButton("Click me!");
         
         toolBar.setTextPanel(textpanel);
         
-        btn.addActionListener(new ActionListener(){
-            //this method runs when the btn is clicked
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                textpanel.AppendText("TEXT\n");
-            }
-        });
         
         add(toolBar, BorderLayout.NORTH);
         add(textpanel, BorderLayout.CENTER);
-        add(btn, BorderLayout.SOUTH);
         
 
         //Set the new frame location
