@@ -31,7 +31,7 @@ public class shimpment{
 //               frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //               frame.setVisible(true);
                 //calling the constructor for the layout we made in another class
-                new FrameLayout();
+                new MainFrame();
             }
         
         });

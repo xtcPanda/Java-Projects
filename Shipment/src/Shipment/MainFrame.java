@@ -16,14 +16,14 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 //editing the JFrame class in a child class
-public class FrameLayout extends JFrame {
+public class MainFrame extends JFrame {
     //adding components
     private TextPanel textpanel;
     private Toolbar toolBar;
     private FormPanel formpanel;
     
     //adding a constructor for the class
-    public FrameLayout(){
+    public MainFrame(){
         //calling the constructor for the parent class with super
         //adding a title to it
         super("Shipment Company GUI");
@@ -40,6 +40,14 @@ public class FrameLayout extends JFrame {
                textpanel.AppendText(text);
             }
         
+        });
+        
+        formpanel.setFormListener(new FormListener(){
+            public void formEventOccured(FormEvent e){
+                String name = e.getName();
+                String occupation = e.getOccupation();
+                textpanel.AppendText(name + ": " + occupation + "\n");
+            }
         });
         
         
