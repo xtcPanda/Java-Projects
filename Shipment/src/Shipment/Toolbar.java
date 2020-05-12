@@ -48,12 +48,10 @@ public class Toolbar extends JPanel implements  ActionListener{
           if(textListener != null){
               textListener.textEmitted("HELLO !\n");
           }
-      }else if(clicked == GNBtn){
+      }else{
           if(textListener != null){
               textListener.textEmitted("GN !\n");
           }
-      }else{
-//          textpanel.AppendText("well who ?");
       }
 
     }
