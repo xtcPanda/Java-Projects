@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package shipmentgui;
+package Shipment;
+
+import java.util.EventListener;
 
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
@@ -12,6 +14,7 @@ import javax.swing.JFrame;
  *
  * @author mo3az
  */
+<<<<<<< HEAD:ShipmentGUI/src/shipmentgui/ShipmentGUI.java
 public class ShipmentGUI{
 
     public ShipmentGUI(){
@@ -30,4 +33,8 @@ public class ShipmentGUI{
         new ShipmentGUI();
     }
     
+=======
+public interface FormListener extends EventListener{
+    public void formEventOccured(FormEvent e);
+>>>>>>> parent of dacfcc4... DELETING THE PROJECTING:Shipment/src/Shipment/FormListener.java
 }
