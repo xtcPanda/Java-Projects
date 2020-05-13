@@ -2,6 +2,7 @@
 /Shipment/nbproject/private/
 /Shipment/build/
 <<<<<<< HEAD
+<<<<<<< HEAD
 /Shipment/dist/
 *.xml
 /shipment/nbproject/private/
@@ -11,6 +12,9 @@
 /JavaFXSwingApplication1/dist/
 /ShipmentGUI/nbproject/private/
 /ShipmentGUI/build/
+=======
+/Shipment/dist/
+>>>>>>> parent of dacfcc4... DELETING THE PROJECTING
 =======
 /Shipment/dist/
 >>>>>>> parent of dacfcc4... DELETING THE PROJECTING

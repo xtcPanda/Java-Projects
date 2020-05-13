@@ -4,16 +4,25 @@
  * and open the template in the editor.
  */
 package Shipment;
+<<<<<<< HEAD
 
 import java.util.EventListener;
 
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
+=======
+<<<<<<< HEAD:Shipment/src/Shipment/StringListener.java
+=======
+
+import java.util.EventListener;
+>>>>>>> parent of dacfcc4... DELETING THE PROJECTING:Shipment/src/Shipment/FormListener.java
+>>>>>>> parent of dacfcc4... DELETING THE PROJECTING
 
 /**
  *
  * @author mo3az
  */
+<<<<<<< HEAD
 <<<<<<< HEAD:ShipmentGUI/src/shipmentgui/ShipmentGUI.java
 public class ShipmentGUI{
 
@@ -33,6 +42,11 @@ public class ShipmentGUI{
         new ShipmentGUI();
     }
     
+=======
+<<<<<<< HEAD:Shipment/src/Shipment/StringListener.java
+public interface StringListener {
+    public void textEmitted(String text);
+>>>>>>> parent of dacfcc4... DELETING THE PROJECTING
 =======
 public interface FormListener extends EventListener{
     public void formEventOccured(FormEvent e);
