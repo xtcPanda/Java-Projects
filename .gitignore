@@ -2,3 +2,10 @@
 /Shipment/nbproject/private/
 /Shipment/build/
 /Shipment/dist/
+*.xml
+/shipment/nbproject/private/
+/JavaFXApplication3/nbproject/private/
+/JavaFXSwingApplication1/nbproject/private/
+/JavaFXSwingApplication1/build/
+/JavaFXSwingApplication1/dist/
+/ShipmentGUI/nbproject/private/

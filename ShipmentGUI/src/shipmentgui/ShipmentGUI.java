@@ -3,14 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Shipment;
-
-import java.util.EventListener;
+package shipmentgui;
 
 /**
  *
  * @author mo3az
  */
-public interface FormListener extends EventListener{
-    public void formEventOccured(FormEvent e);
+public class ShipmentGUI {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+    
 }
