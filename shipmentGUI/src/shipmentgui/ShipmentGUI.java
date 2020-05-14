@@ -227,23 +227,37 @@ public class ShipmentGUI {
         
         list = new JTable();
         // Column Names 
-        Object[] columns = { (ID+1), "From", "To", "Date" /*, "Details"*/}; 
+        Object[] columns = { "ID", "From", "To", "Date" /*, "Details"*/}; 
   
+        DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(columns);
-        list.setModel(model);  
-        list.setRowHeight(20);
-        list.setEnabled(false);
         
+        list.setModel(model);
+        list.setEnabled(false);
+        list.setRowSelectionAllowed(true);
+        list.setColumnSelectionAllowed(false);
+        
+        
+        sp = new JScrollPane(list);
+        sp.setBounds(0, 0, 500, 225);
+        listFrame.add(sp);
+        
+        
+        Object[] row = new Object[4];
         submit.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                //model.addRow(new Object[]{jTextField1.getText(), jTextField2.getText(),jTextField3.getText(),jTextField4.getText()});
-                model.addRow(columns);
+                ID++;
+                row[0] = ID;
+                row[1] = adressFS.getText();
+                row[2] = adressFR.getText();
+                row[3] = shippingDateF.getText();
+                
+                // add row to the model
+                model.addRow(row);
+                
             }
         });
   
-        // adding it to JScrollPane 
-        sp = new JScrollPane(list); 
-        listFrame.add(sp);
         
         listFrame.revalidate();
         listFrame.repaint();
