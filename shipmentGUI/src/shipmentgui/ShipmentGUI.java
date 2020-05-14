@@ -223,9 +223,9 @@ public class ShipmentGUI {
         ////////////////////////////////////////////////    
         listFrame = new JFrame();
         listFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        listFrame.setLocation(600,300);
+        listFrame.setLocation(700,200);
         listFrame.setSize(500,225);
-        listFrame.setVisible(true);
+        listFrame.setVisible(false);
         
         list = new JTable();
         // Column Names 
@@ -255,6 +255,7 @@ public class ShipmentGUI {
                 
                 // add row to the model
                 model.addRow(row);
+                listFrame.setVisible(true);
                 
             }
         });
