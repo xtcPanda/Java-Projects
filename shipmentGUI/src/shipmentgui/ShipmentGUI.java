@@ -22,6 +22,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
@@ -61,6 +62,7 @@ public class ShipmentGUI {
     DefaultTableModel model ;
     JScrollPane sp;
     int ID = 0;
+    JButton deletebtn;
     
     public ShipmentGUI(){
         addingFrame = new JFrame();
@@ -239,7 +241,6 @@ public class ShipmentGUI {
         
         
         sp = new JScrollPane(list);
-        sp.setBounds(0, 0, 500, 225);
         listFrame.add(sp);
         
         
@@ -257,7 +258,31 @@ public class ShipmentGUI {
                 
             }
         });
-  
+        //deleting on selection 
+        list.getSelectionModel().setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        
+        deletebtn = new JButton("Delete");
+        listFrame.add(deletebtn, BorderLayout.SOUTH);
+        
+        // button remove row
+        deletebtn.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            
+                // i = the index of the selected row
+                int i = list.getSelectedRow();
+                if(i >= 0){
+                    // remove a row from jtable
+                    model.removeRow(i);
+                }
+                else{
+                    System.out.println("Delete Error");
+                }
+            }
+        });
+        
+        
         
         listFrame.revalidate();
         listFrame.repaint();
