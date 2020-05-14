@@ -15,6 +15,8 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -235,7 +237,7 @@ public class ShipmentGUI {
         model.setColumnIdentifiers(columns);
         
         list.setModel(model);
-        list.setEnabled(false);
+        list.setEnabled(true);
         list.setRowSelectionAllowed(true);
         list.setColumnSelectionAllowed(false);
         
@@ -283,6 +285,15 @@ public class ShipmentGUI {
             }
         });
         
+        // get selected row data From table to textfields 
+        list.addMouseListener(new MouseAdapter(){
+        
+        public void mouseClicked(MouseEvent e){
+            
+            // i = the index of the selected row
+            int i = list.getSelectedRow();
+        }
+        });
         
         
         listFrame.revalidate();
