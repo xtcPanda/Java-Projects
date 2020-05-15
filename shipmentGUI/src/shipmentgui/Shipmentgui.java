@@ -33,7 +33,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author mo3az
  */
-public class ShipmentGUI {
+public class Shipmentgui {
     JFrame addingFrame;
     JPanel ADD;
     JPanel sender;
@@ -66,7 +66,7 @@ public class ShipmentGUI {
     int ID = 0;
     JButton deletebtn;
     
-    public ShipmentGUI(){
+    public Shipmentgui(){
         addingFrame = new JFrame();
         addingFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         addingFrame.setLocation(600,300);
@@ -307,7 +307,7 @@ public class ShipmentGUI {
         java.awt.EventQueue.invokeLater(new Runnable() {
  
             public void run() {
-                new ShipmentGUI();
+                new Shipmentgui();
             }
         });
        
